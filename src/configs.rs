@@ -25,7 +25,7 @@ struct CpuConfig {
 
 pub fn create_xconfig() {
     let home_dir = home_dir().expect("Failed to get the home directory.");
-    let xconfig_path = home_dir.join(".config/xconfig/teste.json");
+    let xconfig_path = home_dir.join(".config/xconfig/xconfig.json");
 
     //creates a directory if it doesn't exist
     if let Some(parent) = xconfig_path.parent() {
