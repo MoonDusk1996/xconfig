@@ -160,7 +160,7 @@ pub fn update_xmrig_config(mut cpu_selection: u32) {
 fn get_xconfig() -> Result<XConfig, io::Error> {
     let home_dir = home_dir()
         .ok_or_else(|| io::Error::new(io::ErrorKind::Other, "Failed to get the home directory."))?;
-    let xconfig_json_path = home_dir.join(".config/xconfig/teste.json");
+    let xconfig_json_path = home_dir.join(".config/xconfig/xconfig.json");
 
     let content = fs::read_to_string(&xconfig_json_path).map_err(|err| {
         eprintln!("Failed to read xconfig file: {}", err);
